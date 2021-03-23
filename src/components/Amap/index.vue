@@ -17,10 +17,10 @@ export default {
       this.amap = new AMap.Map("gaodeMap", {
         resizeEnable: true,
         // zoom: 3, //级别
+        layers: [new AMap.TileLayer.Satellite()],//Satellite()表示卫星图
         lang: "zh", //可选值：en，zh_en, zh_cn
-        center: [120.587634, 30.040461],
-        zoom: 13
-        // center: [116.397428, 39.90923],//中心点坐标
+        center: [120.587634, 30.040461],//中心点坐标
+        zoom: 13,//级别,数字越大越精细
         //viewMode:'3D'//使用3D视图
       });
       var scale = new AMap.Scale(),
